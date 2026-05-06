@@ -3,7 +3,6 @@
 @section('content')
 <div class="container">
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 900px; margin: 0 auto;">
-        <!-- Фото -->
         <div>
             @if($product->image)
                 <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" style="width: 100%; border-radius: 10px;">
@@ -12,7 +11,6 @@
             @endif
         </div>
         
-        <!-- Информация -->
         <div>
             <h1>{{ $product->name }}</h1>
             <p style="color: #888; margin-bottom: 20px;">Категория: {{ $product->category->name ?? 'Без категории' }}</p>
