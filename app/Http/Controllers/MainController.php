@@ -71,7 +71,7 @@ class MainController extends Controller
                 'name' => $product->name,
                 'price' => $product->price,
                 'qty' => 1,
-                'image' => $product->image // Сохраняем картинку для отображения
+                'image' => $product->image
             ];
         }
 
