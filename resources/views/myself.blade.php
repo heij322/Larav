@@ -6,7 +6,6 @@
         <p style="color: #666;">Добро пожаловать, {{ $user->name }}!</p>
     </div>
 
-    <!-- Данные пользователя -->
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px;">
         <div class="product-card" style="text-align: left; width: 193%;">
             <h3 style="margin-bottom: 15px; color: var(--primary-green);"><i class="fas fa-user-circle"></i> Мои данные</h3>
@@ -17,7 +16,6 @@
         
     </div>
 
-    <!-- История заказов -->
     <h2 style="margin-bottom: 20px;"><i class="fas fa-history"></i> Мои заказы</h2>
     
     @if($orders->count() > 0)
@@ -34,9 +32,8 @@
                     <div style="text-align: right;">
                         <div style="font-weight: 800; font-size: 18px;">{{ $order->total }} ₽</div>
                         
-                        <!-- Перевод статусов -->
                         @php
-                            $statusClass = 'btn-outline'; // по умолчанию серый
+                            $statusClass = 'btn-outline';
                             $statusText = $order->status;
 
                             if ($order->status == 'new') {
