@@ -1,14 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- Главный баннер -->
     <div class="hero-section">
         <h1>Свежие продукты с фермы</h1>
         <p style="color: #666; margin-bottom: 20px;">Доставляем натуральные продукты прямо к вашему столу</p>
         <a href="/catalog" class="btn">Перейти в каталог</a>
     </div>
 
-    <!-- Преимущества -->
     <div class="features">
         <div class="feature-item">
             <i class="fas fa-seedling"></i>
@@ -32,13 +30,11 @@
         </div>
     </div>
 
-    <!-- Секция популярных товаров -->
     <h2 style="margin-bottom: 20px; color: var(--text-color);">Популярные товары</h2>
     
     <div class="card-grid">
         @foreach($products as $product)
             <div class="product-card">
-                <!-- БЛОК КАРТИНКИ (УБРАЛИ STORAGE) -->
                 <div class="product-img-placeholder">
                     @if($product->image)
                         <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" style="width:100%; height:100%; object-fit: cover; border-radius: 15px;">
